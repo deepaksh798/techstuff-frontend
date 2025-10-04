@@ -53,17 +53,13 @@ const PokemonDetails = ({ pokemonDetails }) => {
             <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
               <div className="text-sm text-slate-600 mb-1">Height</div>
               <div className="text-2xl font-bold text-slate-900">
-                {pokemonDetails?.height
-                  ? `${(pokemonDetails.height / 10).toFixed(1)} m`
-                  : "N/A"}
+                {pokemonDetails?.height ? `${pokemonDetails.height} m` : "N/A"}
               </div>
             </div>
             <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
               <div className="text-sm text-slate-600 mb-1">Weight</div>
               <div className="text-2xl font-bold text-slate-900">
-                {pokemonDetails?.weight
-                  ? `${(pokemonDetails.weight / 10).toFixed(1)} kg`
-                  : "N/A"}
+                {pokemonDetails?.weight ? `${pokemonDetails.weight} kg` : "N/A"}
               </div>
             </div>
           </div>
