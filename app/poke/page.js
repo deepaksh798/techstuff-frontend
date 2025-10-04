@@ -13,6 +13,7 @@ import {
 import { fetchPokemonDetails, fetchPokemons } from "@/network/Api";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 const Page = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -30,10 +31,11 @@ const Page = () => {
       .then((res) => {
         console.log("res>", res?.data?.results);
         setPokemon(res?.data?.results);
-        setTotalPage(Math.ceil(res.data.count / 20));
+        setTotalPage(Math.ceil(res?.data?.count / 20));
       })
       .catch((err) => {
         console.log("err>", err);
+        toast.error(err?.message || "Something went wrong!");
       });
   };
 
@@ -51,6 +53,7 @@ const Page = () => {
       })
       .catch((err) => {
         console.log("err>", err);
+        toast.error(err?.message || "Something went wrong!");
       });
   };
 
