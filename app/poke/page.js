@@ -137,7 +137,7 @@ const Page = () => {
 
                       return (
                         <TableRow
-                          key={`${poke.name}-${index}`}
+                          key={index}
                           className={`cursor-pointer transition-colors ${
                             isSelected
                               ? "bg-blue-50 hover:bg-blue-100 border-l-4 border-l-blue-500"

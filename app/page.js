@@ -7,5 +7,5 @@ export default function Home() {
     // window.location.href = "/poke";
     redirect("/poke");
   }, []);
-  return <h1>Root Layout Page</h1>;
+  return <h1>Loading...</h1>;
 }
