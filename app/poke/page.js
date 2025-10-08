@@ -1,5 +1,5 @@
 "use client";
-export const runtime = edge;
+// export const runtime = edge;
 
 import PokemonDetails from "@/components/PokemonDetails";
 import { Button } from "@/components/ui/button";
