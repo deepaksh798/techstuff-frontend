@@ -1,11 +1,16 @@
 "use client";
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 import { redirect } from "next/navigation";
 
 export default function Home() {
   useEffect(() => {
-    // window.location.href = "/poke";
+    // Use client-side redirect
     redirect("/poke");
   }, []);
-  return <h1>Loading...</h1>;
+
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-white">
+      <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+    </div>
+  );
 }
